@@ -81,19 +81,3 @@ function switchTab(event, tabName) {
 
 // Inicializa a aba "flores" ao carregar a página pela primeira vez
 document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas['flores'];
-
-// Configuração do Player de Vídeo Principal do Topo
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById('main-video');
-    const videoSrc = ''; // Coloque o link ou arquivo do vídeo principal do topo aqui se quiser
-
-    if (videoSrc) {
-        if (Hls.isSupported() && videoSrc.endsWith('.m3u8')) {
-            const hls = new Hls();
-            hls.loadSource(videoSrc);
-            hls.attachMedia(video);
-        } else {
-            video.src = videoSrc;
-        }
-    }
-});
