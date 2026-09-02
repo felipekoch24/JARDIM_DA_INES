@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardim da Ines - Jardim & Entretenimento</title>
+    <!-- Arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Biblioteca HLS.js para suportar M3U8 e MP4 -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Cabeçalho -->
+        <header class="app-header">
+            <h1><i class="fa-solid fa-seedling"></i> Jardim da Ines</h1>
+            <p>Seu cantinho de carinho, flores e diversão</p>
+        </header>
+
+        <!-- Vídeo em Destaque no Topo -->
+        <div class="video-top-container">
+            <video id="main-video" controls poster="" playsinline></video>
+        </div>
+
+        <!-- Navegação por Abas -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(event, 'flores')">
+                <i class="fa-solid fa-spa"></i> Flores
+            </button>
+            <button class="tab-btn" onclick="switchTab(event, 'novelas')">
+                <i class="fa-solid fa-clapperboard"></i> Novelas
+            </button>
+            <button class="tab-btn" onclick="switchTab(event, 'familia')">
+                <i class="fa-solid fa-heart"></i> Família
+            </button>
+            <button class="tab-btn" onclick="switchTab(event, 'contato')">
+                <i class="fa-solid fa-headset"></i> Suporte
+            </button>
+        </nav>
+
+        <!-- Conteúdo Dinâmico (Injetado via JS) -->
+        <main class="tab-content" id="conteudo-dinamico">
+            <!-- Os dados entram aqui automaticamente -->
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="app-footer">
+            Desenvolvido com carinho &copy; 2026
+        </footer>
+    </div>
+
+    <!-- Arquivo JavaScript separado -->
+    <script src="script.js"></script>
+</body>
+</html>
