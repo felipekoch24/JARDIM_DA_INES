@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #ffe6ed !important;
+    background-color: #ffe8ed !important;
     color: #2b2b2b !important;
     display: flex;
     justify-content: center;
@@ -20,16 +20,16 @@ body {
     max-width: 480px;
     background: #ffffff !important;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(255, 107, 129, 0.25);
+    box-shadow: 0 10px 25px rgba(255, 71, 87, 0.2);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 90vh;
-    border: 3px solid #ff8da1;
+    border: 2px solid #ffccd5;
 }
 
 .app-header {
-    background: linear-gradient(135deg, #ff6b81, #ff4757) !important;
+    background: linear-gradient(135deg, #ff5c75, #ff334b) !important;
     color: white !important;
     padding: 35px 20px;
     text-align: center;
@@ -48,7 +48,7 @@ body {
     font-size: 1.15rem !important;
     opacity: 0.95;
     margin-top: 10px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* Abas com letras grandes e visíveis */
@@ -57,34 +57,35 @@ body {
     background: #ffffff !important;
     padding: 12px;
     gap: 8px;
-    border-bottom: 3px solid #ffc2cd;
+    border-bottom: 2px solid #ffe3e6;
 }
 
 .tab-btn {
     flex: 1;
-    background: #fff0f3 !important;
-    border: 2px solid #ffb3c1;
+    background: #ffffff !important;
+    border: 1px solid #f0f0f0;
     padding: 14px 6px;
     border-radius: 14px;
     font-size: 0.9rem !important;
-    font-weight: 700 !important;
-    color: #d63031 !important;
+    font-weight: 600 !important;
+    color: #777777 !important;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
 }
 
 .tab-btn i {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
 }
 
 .tab-btn.active {
-    background: #ff6b81 !important;
+    background: #ff5c75 !important;
     color: white !important;
-    border-color: #ff4757;
-    box-shadow: 0 4px 12px rgba(255, 107, 129, 0.4);
+    border-color: #ff5c75;
+    box-shadow: 0 4px 12px rgba(255, 92, 117, 0.4);
 }
 
 /* Conteúdo com textos bem grandes para facilitar a visão */
@@ -92,7 +93,7 @@ body {
     flex: 1;
     padding: 22px;
     overflow-y: auto;
-    background-color: #fff9fa !important;
+    background-color: #ffffff !important;
 }
 
 .pane {
@@ -104,10 +105,10 @@ body {
 }
 
 .section-title {
-    font-size: 1.4rem !important;
+    font-size: 1.35rem !important;
     font-weight: 700 !important;
     margin-bottom: 18px;
-    color: #ff4757 !important;
+    color: #ff334b !important;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -115,30 +116,30 @@ body {
 
 .card-item {
     background: #ffffff !important;
-    border: 2px solid #ffb3c1 !important;
+    border: 2px solid #ffe3e6 !important;
     padding: 20px !important;
     border-radius: 16px;
     margin-bottom: 16px;
-    box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
 }
 
 .card-item h3 {
-    font-size: 1.3rem !important;
+    font-size: 1.25rem !important;
     font-weight: 700 !important;
     margin-bottom: 10px;
     color: #2b2b2b !important;
 }
 
 .card-item p {
-    font-size: 1.15rem !important;
-    font-weight: 600 !important;
-    color: #4a4a4a !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: #555555 !important;
     line-height: 1.6;
 }
 
 .dev-card {
-    background: linear-gradient(145deg, #fff5f7, #ffe3e8) !important;
-    border: 3px dashed #ff6b81;
+    background: linear-gradient(145deg, #fff5f7, #ffe8ed) !important;
+    border: 2px dashed #ff5c75;
     border-radius: 20px;
     padding: 25px;
     text-align: center;
@@ -146,13 +147,13 @@ body {
 
 .dev-avatar {
     font-size: 3rem;
-    color: #ff6b81;
+    color: #ff5c75;
     margin-bottom: 12px;
 }
 
 .dev-card p {
     font-size: 1.15rem !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #4a4a4a !important;
@@ -178,8 +179,8 @@ body {
     text-align: center;
     padding: 15px;
     font-size: 0.95rem !important;
-    font-weight: 700;
-    color: #666666 !important;
-    border-top: 3px solid #ffc2cd;
+    font-weight: 600;
+    color: #777777 !important;
+    border-top: 2px solid #ffe3e6;
     background: #ffffff !important;
 }
