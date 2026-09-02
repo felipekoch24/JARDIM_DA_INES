@@ -1,4 +1,3 @@
-// Objeto contendo o conteúdo estruturado de cada aba
 const conteudoAbas = {
     flores: `
         <div class="pane active">
@@ -40,17 +39,17 @@ const conteudoAbas = {
             
             <div class="card-item">
                 <h3>Vídeo 01</h3>
-                <video controls width="100%" src="01.mp4" style="margin-top:8px; border-radius:8px;" playsinline></video>
+                <video controls width="100%" src="01.mp4" style="margin-top:10px; border-radius:12px;" playsinline></video>
             </div>
 
             <div class="card-item">
                 <h3>Vídeo 02</h3>
-                <video controls width="100%" src="02.mp4" style="margin-top:8px; border-radius:8px;" playsinline></video>
+                <video controls width="100%" src="02.mp4" style="margin-top:10px; border-radius:12px;" playsinline></video>
             </div>
 
             <div class="card-item">
                 <h3>Vídeo 03</h3>
-                <video controls width="100%" src="03.mp4" style="margin-top:8px; border-radius:8px;" playsinline></video>
+                <video controls width="100%" src="03.mp4" style="margin-top:10px; border-radius:12px;" playsinline></video>
             </div>
         </div>
     `,
@@ -58,7 +57,7 @@ const conteudoAbas = {
         <div class="pane active">
             <div class="dev-card">
                 <div class="dev-avatar"><i class="fa-solid fa-code"></i></div>
-                <h3 style="margin-bottom: 8px; color: var(--secondary-color);">Canal de Atendimento</h3>
+                <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ff4757;">Canal de Atendimento</h3>
                 <p>Envie suas melhorias, upgrades, reclamações, sugestões ou elogios diretamente para o suporte!</p>
                 
                 <a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn">
@@ -69,15 +68,13 @@ const conteudoAbas = {
     `
 };
 
-// Função para alternar as abas dinamicamente
 function switchTab(event, tabName) {
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
     });
-
     event.currentTarget.classList.add('active');
     document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas[tabName];
 }
 
-// Inicializa a aba "flores" ao carregar a página pela primeira vez
+// Carrega a primeira aba ao abrir
 document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas['flores'];
