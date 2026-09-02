@@ -37,13 +37,20 @@ const conteudoAbas = {
     familia: `
         <div class="pane active">
             <div class="section-title"><i class="fa-solid fa-heart-pulse"></i> Momentos Fofinhos da Família</div>
+            
             <div class="card-item">
-                <h3>Sorrisos que Aquecem o Coração</h3>
-                <p>Vídeos rápidos e lembranças especiais dos melhores momentos juntos.</p>
+                <h3>Vídeo 01</h3>
+                <video controls width="100%" src="01.mp4" style="margin-top:8px; border-radius:8px;" playsinline></video>
             </div>
+
             <div class="card-item">
-                <h3>Almoço em Família</h3>
-                <p>Risadas, conversas e aquela resenha boa que a gente guarda na memória.</p>
+                <h3>Vídeo 02</h3>
+                <video controls width="100%" src="02.mp4" style="margin-top:8px; border-radius:8px;" playsinline></video>
+            </div>
+
+            <div class="card-item">
+                <h3>Vídeo 03</h3>
+                <video controls width="100%" src="03.mp4" style="margin-top:8px; border-radius:8px;" playsinline></video>
             </div>
         </div>
     `,
@@ -75,18 +82,18 @@ function switchTab(event, tabName) {
 // Inicializa a aba "flores" ao carregar a página pela primeira vez
 document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas['flores'];
 
-// Configuração do Player de Vídeo Principal (Suporta M3U8 e MP4 universalmente)
+// Configuração do Player de Vídeo Principal do Topo
 document.addEventListener("DOMContentLoaded", function() {
     const video = document.getElementById('main-video');
-    // Cole aqui o link do seu vídeo principal (.m3u8 gerado pelo FFmpeg ou um .mp4 direto)
-    const videoSrc = 'seu-video-principal.m3u8'; 
+    const videoSrc = ''; // Coloque o link ou arquivo do vídeo principal do topo aqui se quiser
 
-    if (Hls.isSupported() && videoSrc.endsWith('.m3u8')) {
-        const hls = new Hls();
-        hls.loadSource(videoSrc);
-        hls.attachMedia(video);
-    } else if (video.canPlayType('application/vnd.apple.mpegurl') || videoSrc.endsWith('.mp4')) {
-        // Suporte nativo para Safari (iOS) ou arquivos MP4 normais
-        video.src = videoSrc;
+    if (videoSrc) {
+        if (Hls.isSupported() && videoSrc.endsWith('.m3u8')) {
+            const hls = new Hls();
+            hls.loadSource(videoSrc);
+            hls.attachMedia(video);
+        } else {
+            video.src = videoSrc;
+        }
     }
 });
