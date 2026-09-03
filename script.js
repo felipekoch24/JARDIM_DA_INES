@@ -5,8 +5,8 @@ const conteudoAbas = {
             
             <div class="card-item">
                 <h3>🌸 Vídeo Especial: Lírio da Paz</h3>
-                <p>Um guia prático e direto ao ponto de 2 minutos sobre como cuidar direitinho do Lírio da Paz para ele ficar sempre lindo.</p>
-                <video controls width="100%" src="lirio_da_paz.mp4" style="margin-top:10px; border-radius:12px;" playsinline></video>
+                <p>Guia prático e direto ao ponto de 2 minutos sobre como cuidar direitinho do Lírio da Paz para ele ficar sempre lindo.</p>
+                <video controls loop playsinline width="100%" src="lirio_da_paz.mp4" style="margin-top:10px; border-radius:12px;"></video>
             </div>
 
             <div class="card-item">
@@ -30,36 +30,53 @@ const conteudoAbas = {
             <div class="card-item">
                 <h3>Parabéns Especial 🐱🎂</h3>
                 <p>Olha só esse gatinho fofo com um bolo dando parabéns para celebrar a data!</p>
-                <video controls width="100%" src="01.mp4" style="margin-top:10px; border-radius:12px;" playsinline></video>
+                <video controls loop playsinline width="100%" src="01.mp4" style="margin-top:10px; border-radius:12px;"></video>
             </div>
 
             <div class="card-item">
                 <h3>Momentos de Aniversário 🎉</h3>
                 <p>Registros rápidos e cheios de alegria para guardar na memória.</p>
-                <video controls width="100%" src="02.mp4" style="margin-top:10px; border-radius:12px;" playsinline></video>
+                <video controls loop playsinline width="100%" src="02.mp4" style="margin-top:10px; border-radius:12px;"></video>
             </div>
 
             <div class="card-item">
                 <h3>Reunião em Família ❤️</h3>
                 <p>O vídeo mais completo e especial reunindo a família toda celebrando junta.</p>
-                <video controls width="100%" src="03.mp4" style="margin-top:10px; border-radius:12px;" playsinline></video>
+                <video controls loop playsinline width="100%" src="03.mp4" style="margin-top:10px; border-radius:12px;"></video>
             </div>
         </div>
     `,
     contato: `
         <div class="pane active">
-            <div class="dev-card">
-                <div class="dev-avatar"><i class="fa-solid fa-code"></i></div>
-                <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #ff4757;">Canal de Atendimento</h3>
-                <p>Envie suas melhorias, upgrades, reclamações, sugestões ou elogios diretamente para o suporte!</p>
+            <div class="dev-card" style="text-align: center;">
+                <img src="dev.png" alt="Desenvolvedor" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4757; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);" onerror="this.style.display='none'">
                 
-                <a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn">
-                    <i class="fa-brands fa-whatsapp fa-lg"></i> Abrir WhatsApp
+                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #ff4757;">Fale Comigo</h3>
+                <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px;">
+                    Espero que goste do app e seja útil pra você!<br>
+                    Qualquer duvida, só entrar em contato comigo.
+                </p>
+                
+                <a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn" style="font-size: 1.1rem; padding: 14px 20px;">
+                    <i class="fa-brands fa-whatsapp fa-lg"></i> Chamar no WhatsApp
                 </a>
             </div>
         </div>
     `
 };
+
+function configurarVideos() {
+    const allVideos = document.querySelectorAll('video');
+    allVideos.forEach(video => {
+        video.addEventListener('play', () => {
+            allVideos.forEach(otherVideo => {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        });
+    });
+}
 
 function switchTab(event, tabName) {
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -67,7 +84,8 @@ function switchTab(event, tabName) {
     });
     event.currentTarget.classList.add('active');
     document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas[tabName];
+    configurarVideos();
 }
 
-// Carrega a primeira aba ao abrir (Flores)
 document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas['flores'];
+configurarVideos();
