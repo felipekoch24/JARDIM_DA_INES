@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #121212;
+    background-color: #1a0f14; /* Fundo escuro com toque rosado/vinho */
     color: #f5f5f5;
     font-family: 'Poppins', sans-serif;
     padding: 15px;
@@ -16,13 +16,14 @@ body {
 .app-container {
     width: 100%;
     max-width: 600px;
-    background-color: #1e1e24;
+    background-color: #2c1621; /* Cartão com tom rosado escuro */
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #51253c;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
 }
 
-/* Cabeçalho Maior */
+/* Cabeçalho */
 .app-header {
     text-align: center;
     margin-bottom: 25px;
@@ -30,13 +31,14 @@ body {
 
 .app-header h1 {
     font-size: 2rem;
-    color: #4cd137;
+    color: #ff4081; /* Rosa vibrante */
     margin-bottom: 5px;
+    text-shadow: 0 2px 10px rgba(255, 64, 129, 0.4);
 }
 
 .app-header p {
     font-size: 1.15rem;
-    color: #b2bec3;
+    color: #f8bbd0;
 }
 
 /* Botões das Abas Maiores e Fáceis de Clicar */
@@ -49,9 +51,9 @@ body {
 
 .tab-btn {
     flex: 1;
-    background-color: #2f3640;
-    color: #f5f5f5;
-    border: none;
+    background-color: #1a0f14;
+    color: #f8bbd0;
+    border: 1px solid #51253c;
     padding: 14px 10px;
     font-size: 1.05rem;
     font-weight: 600;
@@ -61,10 +63,16 @@ body {
     text-align: center;
 }
 
+.tab-btn:hover {
+    color: #fff;
+    border-color: #ff4081;
+}
+
 .tab-btn.active {
-    background-color: #4cd137;
-    color: #121212;
-    box-shadow: 0 0 15px rgba(76, 209, 55, 0.4);
+    background-color: #ff4081;
+    color: #1a0f14;
+    border-color: #ff4081;
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
 }
 
 /* Conteúdo e Textos Gigantes para Facilitar a Visão */
@@ -77,15 +85,18 @@ body {
 .section-title {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4cd137;
+    color: #ff4081;
     margin-bottom: 5px;
 }
 
 .card-item {
-    background-color: #2b2b36;
+    background-color: #1a0f14;
     padding: 20px;
     border-radius: 15px;
-    border-left: 5px solid #4cd137;
+    border-left: 5px solid #ff4081;
+    border-top: 1px solid #51253c;
+    border-right: 1px solid #51253c;
+    border-bottom: 1px solid #51253c;
 }
 
 .card-item h3 {
@@ -96,16 +107,17 @@ body {
 
 .card-item p {
     font-size: 1.15rem;
-    color: #dcdde1;
+    color: #f8bbd0;
     line-height: 1.6;
 }
 
 /* Cartão do Desenvolvedor (Suporte) */
 .dev-card {
-    background-color: #2b2b36;
+    background-color: #1a0f14;
     padding: 25px;
     border-radius: 15px;
     text-align: center;
+    border: 1px solid #51253c;
 }
 
 .whatsapp-btn {
@@ -113,8 +125,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #25d366;
-    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #25d366;
+    color: #25d366;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
@@ -122,7 +135,13 @@ body {
     border-radius: 14px;
     margin-top: 15px;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #25d366;
+    color: #1a0f14;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
 }
 
 /* Rodapé */
@@ -130,5 +149,5 @@ body {
     text-align: center;
     margin-top: 30px;
     font-size: 1rem;
-    color: #718093;
+    color: #f8bbd0;
 }
