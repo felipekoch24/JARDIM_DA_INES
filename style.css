@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #1a0f14; /* Fundo escuro com toque rosado/vinho */
-    color: #f5f5f5;
+    background-color: #1a0f14;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     padding: 15px;
     display: flex;
@@ -16,11 +16,11 @@ body {
 .app-container {
     width: 100%;
     max-width: 600px;
-    background-color: #2c1621; /* Cartão com tom rosado escuro */
+    background-color: #2c1621;
     border-radius: 20px;
     padding: 20px;
-    border: 1px solid #51253c;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    border: 2px solid #ff4081;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.9);
 }
 
 /* Cabeçalho */
@@ -30,52 +30,47 @@ body {
 }
 
 .app-header h1 {
-    font-size: 2rem;
-    color: #ff4081; /* Rosa vibrante */
-    margin-bottom: 5px;
-    text-shadow: 0 2px 10px rgba(255, 64, 129, 0.4);
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #ff4081;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(255, 64, 129, 0.6);
 }
 
 .app-header p {
-    font-size: 1.15rem;
-    color: #f8bbd0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
 }
 
-/* Botões das Abas Maiores e Fáceis de Clicar */
+/* Botões das Abas Maiores */
 .tab-nav {
     display: flex;
     justify-content: space-between;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 25px;
 }
 
 .tab-btn {
     flex: 1;
     background-color: #1a0f14;
-    color: #f8bbd0;
-    border: 1px solid #51253c;
-    padding: 14px 10px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border-radius: 12px;
+    color: #ffffff;
+    border: 2px solid #ff4081;
+    padding: 16px 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 14px;
     cursor: pointer;
-    transition: 0.2s;
     text-align: center;
-}
-
-.tab-btn:hover {
-    color: #fff;
-    border-color: #ff4081;
 }
 
 .tab-btn.active {
     background-color: #ff4081;
     color: #1a0f14;
-    border-color: #ff4081;
-    box-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.8);
 }
 
-/* Conteúdo e Textos Gigantes para Facilitar a Visão */
+/* Conteúdo com Letras Gigantes e Negrito */
 .pane {
     display: flex;
     flex-direction: column;
@@ -83,71 +78,75 @@ body {
 }
 
 .section-title {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 900;
     color: #ff4081;
     margin-bottom: 5px;
 }
 
 .card-item {
     background-color: #1a0f14;
-    padding: 20px;
-    border-radius: 15px;
-    border-left: 5px solid #ff4081;
-    border-top: 1px solid #51253c;
-    border-right: 1px solid #51253c;
-    border-bottom: 1px solid #51253c;
+    padding: 22px;
+    border-radius: 16px;
+    border-left: 7px solid #ff4081;
+    border-top: 2px solid #51253c;
+    border-right: 2px solid #51253c;
+    border-bottom: 2px solid #51253c;
 }
 
 .card-item h3 {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
+    font-weight: 900;
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .card-item p {
-    font-size: 1.15rem;
-    color: #f8bbd0;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fce4ec;
+    line-height: 1.7;
 }
 
 /* Cartão do Desenvolvedor (Suporte) */
 .dev-card {
     background-color: #1a0f14;
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 16px;
     text-align: center;
-    border: 1px solid #51253c;
+    border: 2px solid #ff4081;
+}
+
+.dev-card p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fce4ec;
+    line-height: 1.7;
 }
 
 .whatsapp-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background-color: transparent;
-    border: 2px solid #25d366;
-    color: #25d366;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: 16px 25px;
-    border-radius: 14px;
-    margin-top: 15px;
-    width: 100%;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-btn:hover {
+    gap: 12px;
     background-color: #25d366;
+    border: none;
     color: #1a0f14;
-    box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 900;
+    padding: 18px 25px;
+    border-radius: 16px;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
 }
 
 /* Rodapé */
 .app-footer {
     text-align: center;
     margin-top: 30px;
-    font-size: 1rem;
-    color: #f8bbd0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fce4ec;
 }
