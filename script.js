@@ -61,7 +61,7 @@ const conteudoAbas = {
     contato: `
         <div class="pane active">
             <div class="dev-card" style="text-align: center;">
-                <img src="dev.png" alt="Desenvolvedor" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4757; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);" onerror="this.style.display='none'">
+                <img src="dev.png" alt="Desenvolvedor" id="foto-dev" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4757; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 71, 87, 0.4); cursor: pointer; transition: transform 0.3s;" title="Clique para ampliar a foto!" onerror="this.style.display='none'">
                 
                 <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #ff4757;">Fale Comigo</h3>
                 <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px;">
@@ -71,9 +71,16 @@ const conteudoAbas = {
                     Qualquer dúvida, só entrar em contato comigo.
                 </p>
                 
-                <a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn" style="font-size: 1.1rem; padding: 14px 20px;">
+                <a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn" style="font-size: 1.1rem; padding: 14px 20px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; background-color: #25d366; border: none; color: #1a0f14; text-decoration: none; font-weight: 900; border-radius: 16px; width: 100%; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);">
                     <i class="fa-brands fa-whatsapp fa-lg"></i> Chamar no WhatsApp
                 </a>
+
+                <div style="margin-top: 25px; border-top: 2px dashed #ff4081; padding-top: 20px;">
+                    <p style="font-size: 1.1rem; margin-bottom: 15px; color: #ffffff;">Tem alguma dúvida sobre plantas ou curiosidades?</p>
+                    <a href="https://gemini.google.com" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #4285f4; color: #ffffff; text-decoration: none; font-size: 1.1rem; font-weight: 900; padding: 14px 20px; border-radius: 16px; width: 100%; box-shadow: 0 4px 20px rgba(66, 133, 244, 0.6);">
+                        <i class="fa-solid fa-robot fa-lg"></i> Perguntar ao Gemini
+                    </a>
+                </div>
             </div>
         </div>
     `
@@ -92,6 +99,22 @@ function configurarVideos() {
     });
 }
 
+function configurarFotoDev() {
+    const foto = document.getElementById('foto-dev');
+    if (foto) {
+        let ampliada = false;
+        foto.addEventListener('click', () => {
+            ampliada = !ampliada;
+            if (ampliada) {
+                foto.style.transform = 'scale(1.8)';
+                foto.style.zIndex = '100';
+            } else {
+                foto.style.transform = 'scale(1)';
+            }
+        });
+    }
+}
+
 function switchTab(event, tabName) {
     document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -99,7 +122,9 @@ function switchTab(event, tabName) {
     event.currentTarget.classList.add('active');
     document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas[tabName];
     configurarVideos();
+    configurarFotoDev();
 }
 
 document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas['flores'];
 configurarVideos();
+configurarFotoDev();
