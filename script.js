@@ -58,23 +58,20 @@ const conteudoAbas = {
             </div>
         </div>
     `,
-    contato: `
-        <div class="pane active">
-            <div class="dev-card" style="text-align: center;">
-                <img src="dev.png" alt="Desenvolvedor" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4757; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);" onerror="this.style.display='none'">
-                
-                <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #ff4757;">Fale Comigo</h3>
-                <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px;">
-                    OLÁ AQUI É O DEV (DESENVOLVEDOR).<br>
-                    Adoraria saber se você gostou ou não do projeto, se sigo com ele ou paro!<br>
-                    Espero que goste do app e seja útil pra você!<br>
-                    Qualquer dúvida, só entrar em contato comigo.
-                </p>
-                
-                <a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn" style="font-size: 1.1rem; padding: 14px 20px;">
-                    <i class="fa-brands fa-whatsapp fa-lg"></i> Chamar no WhatsApp
-                </a>
-            </div>
-        </div>
-    `
+    contato: 
+        '<div class="pane active">' +
+            '<div class="dev-card" style="text-align: center;">' +
+                '<img src="dev.png" alt="Desenvolvedor" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4757; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);" onerror="this.style.display=\'none\'">' +
+                '<h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #ff4757;">Fale Comigo</h3>' +
+                '<p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px;">' +
+                    'OLÁ AQUI É O DEV (DESENVOLVEDOR).<br>' +
+                    'Adoraria saber se você gostou ou não do projeto, se sigo com ele ou paro!<br>' +
+                    'Espero que goste do app e seja útil pra você!<br>' +
+                    'Qualquer dúvida, só entrar em contato comigo.' +
+                '</p>' +
+                '<a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn" style="font-size: 1.1rem; padding: 14px 20px;">' +
+                    '<i class="fa-brands fa-whatsapp fa-lg"></i> Chamar no WhatsApp' +
+                '</a>' +
+            '</div>' +
+        '</div>'
 };
