@@ -65,10 +65,10 @@ const conteudoAbas = {
                 
                 <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #ff4757;">Fale Comigo</h3>
                 <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px;">
-                    OLÁ AQUI É O DEV (DESENVOLVEDOR) ADORARIA SABER 
-                    SE VOCÊ GOSTOU OU NÃO DO PROJETO, SE SIGO COM ELE OU PARO
-                    EU espero que esteja gostando do app e seja útil pra você!<br>
-                    Qualquer DUVIDA, só entrar em contato comigo.
+                    OLÁ AQUI É O DEV (DESENVOLVEDOR).<br>
+                    Adoraria saber se você gostou ou não do projeto, se sigo com ele ou paro!<br>
+                    Espero que goste do app e seja útil pra você!<br>
+                    Qualquer dúvida, só entrar em contato comigo.
                 </p>
                 
                 <a href="https://wa.me/5551995830380?text=Ol%C3%A1!%20Vim%20pelo%20Jardim%20da%20Ines..." target="_blank" class="whatsapp-btn" style="font-size: 1.1rem; padding: 14px 20px;">
