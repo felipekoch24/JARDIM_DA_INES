@@ -61,7 +61,8 @@ const conteudoAbas = {
     contato: `
         <div class="pane active">
             <div class="dev-card" style="text-align: center;">
-                <img src="dev.png" alt="Desenvolvedor" id="foto-dev" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4757; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 71, 87, 0.4); cursor: pointer; transition: transform 0.3s;" title="Clique para ampliar a foto!" onerror="this.style.display='none'">
+                <!-- Foto miniatura do DEV -->
+                <img src="dev.png" alt="Desenvolvedor" id="foto-dev" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #ff4757; margin-bottom: 15px; box-shadow: 0 0 15px rgba(255, 71, 87, 0.4); cursor: pointer;" title="Clique para ampliar a foto!" onerror="this.style.display='none'">
                 
                 <h3 style="font-size: 1.5rem; margin-bottom: 15px; color: #ff4757;">Fale Comigo</h3>
                 <p style="font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px;">
@@ -76,11 +77,21 @@ const conteudoAbas = {
                 </a>
 
                 <div style="margin-top: 25px; border-top: 2px dashed #ff4081; padding-top: 20px;">
-                    <p style="font-size: 1.1rem; margin-bottom: 15px; color: #ffffff;">Tem alguma dúvida sobre plantas ou curiosidades?</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 15px; color: #ffffff;">Tem alguma dúvida sobre plantas ou qualquer outro assunto?</p>
                     <a href="https://gemini.google.com" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background-color: #4285f4; color: #ffffff; text-decoration: none; font-size: 1.1rem; font-weight: 900; padding: 14px 20px; border-radius: 16px; width: 100%; box-shadow: 0 4px 20px rgba(66, 133, 244, 0.6);">
                         <i class="fa-solid fa-robot fa-lg"></i> Perguntar ao Gemini
                     </a>
                 </div>
+            </div>
+        </div>
+
+        <!-- Janela oculta da foto grande (Modal) -->
+        <div id="modal-foto" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); z-index: 9999; justify-content: center; align-items: center; flex-direction: column;">
+            <div style="position: relative; max-width: 90%; max-height: 80%; display: flex; flex-direction: column; align-items: center;">
+                <img src="dev.png" alt="Foto Ampliada" style="width: 280px; height: 280px; border-radius: 20px; object-fit: cover; border: 4px solid #ff4757; box-shadow: 0 10px 30px rgba(0,0,0,0.7);">
+                <button id="fechar-modal" style="margin-top: 20px; background-color: #ff4757; color: white; border: none; font-size: 1.1rem; font-weight: bold; padding: 12px 30px; border-radius: 14px; cursor: pointer; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.5);">
+                    <i class="fa-solid fa-xmark"></i> Fechar Foto
+                </button>
             </div>
         </div>
     `
@@ -101,15 +112,24 @@ function configurarVideos() {
 
 function configurarFotoDev() {
     const foto = document.getElementById('foto-dev');
-    if (foto) {
-        let ampliada = false;
+    const modal = document.getElementById('modal-foto');
+    const botaoFechar = document.getElementById('fechar-modal');
+
+    if (foto && modal && botaoFechar) {
+        // Quando clicar na foto pequena, abre a janela grande
         foto.addEventListener('click', () => {
-            ampliada = !ampliada;
-            if (ampliada) {
-                foto.style.transform = 'scale(1.8)';
-                foto.style.zIndex = '100';
-            } else {
-                foto.style.transform = 'scale(1)';
+            modal.style.display = 'flex';
+        });
+
+        // Quando clicar no botão fechar, some com a janela
+        botaoFechar.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Se clicar fora da foto (no fundo escuro), fecha também
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
             }
         });
     }
