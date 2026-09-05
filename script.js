@@ -1,4 +1,4 @@
-Const conteudoAbas = {
+const conteudoAbas = {
     flores: `
         <div class="pane active">
             <div class="section-title"><i class="fa-solid fa-leaf"></i> Como Cuidar das Suas Plantinhas</div>
@@ -141,7 +141,6 @@ function configurarFotoDev() {
     }
 }
 
-// Função de pesquisa para a aba família
 function filtrarFamilia() {
     const termo = document.getElementById('input-busca-familia').value.toLowerCase();
     const cards = document.querySelectorAll('.pane .card-item');
@@ -156,7 +155,6 @@ function filtrarFamilia() {
     });
 }
 
-// Botão Flutuante de Voltar ao Topo
 function criarBotaoTopo() {
     if (document.getElementById('btn-voltar-topo')) return;
     
@@ -167,7 +165,7 @@ function criarBotaoTopo() {
         position: fixed; bottom: 20px; right: 20px; width: 45px; height: 45px;
         background-color: #ff4757; color: white; border: none; border-radius: 50%;
         font-size: 1.2rem; cursor: pointer; display: none; z-index: 999;
-        box-init: 0 4px 15px rgba(0,0,0,0.5); align-items: center; justify-content: center;
+        align-items: center; justify-content: center;
         box-shadow: 0 4px 15px rgba(255, 71, 87, 0.6);
     `;
     
@@ -200,4 +198,3 @@ document.getElementById('conteudo-dinamico').innerHTML = conteudoAbas['flores'];
 configurarVideos();
 configurarFotoDev();
 criarBotaoTopo();
-    
