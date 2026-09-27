@@ -77,6 +77,47 @@ const conteudoAbas = {
             </div>
         </div>
     `,
+    senhas: `
+        <div class="pane active">
+            <div class="section-title"><i class="fa-solid fa-shield-halved"></i> Cofre de Senhas e Dados</div>
+            <p style="font-size: 1.1rem; margin-bottom: 15px; color: #fce4ec;">Clique em qualquer item para copiar automaticamente!</p>
+            
+            <div class="card-item" onclick="copiarTexto('939.098.450-53')" style="cursor: pointer;" title="Clique para copiar">
+                <h3>🪪 CPF</h3>
+                <p>939.098.450-53 <span style="font-size: 0.9rem; color: #ff4081; float: right;"><i class="fa-solid fa-copy"></i> Copiar</span></p>
+            </div>
+
+            <div class="card-item" onclick="copiarTexto('242728')" style="cursor: pointer;" title="Clique para copiar">
+                <h3>🔑 Senha App Cidadão</h3>
+                <p>242728 <span style="font-size: 0.9rem; color: #ff4081; float: right;"><i class="fa-solid fa-copy"></i> Copiar</span></p>
+            </div>
+
+            <div class="card-item" onclick="copiarTexto('Kxo15.28')" style="cursor: pointer;" title="Clique para copiar">
+                <h3>💳 Carteira Digital (Usuário)</h3>
+                <p>Kxo15.28 <span style="font-size: 0.9rem; color: #ff4081; float: right;"><i class="fa-solid fa-copy"></i> Copiar</span></p>
+            </div>
+
+            <div class="card-item" onclick="copiarTexto('Fe4s@768')" style="cursor: pointer;" title="Clique para copiar">
+                <h3>🔒 Senha Carteira Digital</h3>
+                <p>Fe4s@768 <span style="font-size: 0.9rem; color: #ff4081; float: right;"><i class="fa-solid fa-copy"></i> Copiar</span></p>
+            </div>
+
+            <div class="card-item" onclick="copiarTexto('303538')" style="cursor: pointer;" title="Clique para copiar">
+                <h3>💰 Caixa TEM</h3>
+                <p>303538 <span style="font-size: 0.9rem; color: #ff4081; float: right;"><i class="fa-solid fa-copy"></i> Copiar</span></p>
+            </div>
+
+            <div class="card-item" onclick="copiarTexto('Mg293024')" style="cursor: pointer;" title="Clique para copiar">
+                <h3>📱 Senha Maiara (Aplicativo X)</h3>
+                <p>Mg293024 <span style="font-size: 0.9rem; color: #ff4081; float: right;"><i class="fa-solid fa-copy"></i> Copiar</span></p>
+            </div>
+
+            <div class="card-item" onclick="copiarTexto('997835625')" style="cursor: pointer;" title="Clique para copiar">
+                <h3>📞 Telefone Dela</h3>
+                <p>99783-5625 <span style="font-size: 0.9rem; color: #ff4081; float: right;"><i class="fa-solid fa-copy"></i> Copiar</span></p>
+            </div>
+        </div>
+    `,
     contato: `
         <div class="pane active">
             <div class="dev-card" style="text-align: center;">
@@ -113,6 +154,15 @@ const conteudoAbas = {
         </div>
     `
 };
+
+// Função para copiar o texto com um clique
+function copiarTexto(texto) {
+    navigator.clipboard.writeText(texto).then(() => {
+        alert("Copiado com sucesso: " + texto);
+    }).catch(err => {
+        console.error("Erro ao copiar: ", err);
+    });
+}
 
 function configurarVideos() {
     const allVideos = document.querySelectorAll('video');
